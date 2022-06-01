@@ -1,18 +1,94 @@
 body {
     width: 100%;
     height: 100vh;
-    /*?*/
+    /*?vh*/
     margin: 0;
     background-color: #1b1b32;
     color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+h1,
+p {
+    margin: 1em auto;
+    /*?em*/
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 60vw;
+    min-width: 300px;
+    max-width: 500px;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: none;
+    /*to make border disappear*/
+    padding: 2rem 0;
+}
+
+fieldset:not(:last-of-type) {
+    border-bottom: 3px solid #3b3b4f;
 }
 
 label {
     display: block;
     margin: 0.5rem 0;
-    /*?*/
+    /*?rem*/
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    margin: 10px 0 0 0;
+    min-height: 2em;
+
+}
+
+input,
+textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    /*min-height: 2em; moved to above*/
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="submit"] {
+    /*attribute selector,*/
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
 }
 
 /*
 , get rid of the horizontal scroll-bar, by setting the body default margin added by some browsers to 0.
+The :last-of-type CSS pseudo-class represents the last element of its type among a group of sibling elements.
+Select only the .inline elements, and give them width of unset. This will remove the earlier rule which set all the input elements to width: 100%.
+If you look close enough, you will notice the .inline elements are too high on the line.To combat this, set the vertical-align property to middle.
+To style the submit button, you can use an attribute selector, which selects an element based on the given attribute value. Here is an example:  input[name="password"].
+
 */
